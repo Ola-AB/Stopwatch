@@ -7,9 +7,11 @@ const stopWatch = document.querySelector(".stopwatch");
 const time = document.querySelector(".time");
 const timeList = document.querySelector(".time-list");
 
-const infoBtn = document.querySelector(".info");
+const infoBtn = document.querySelector(".fa-question");
 const modalShadow = document.querySelector(".modal-shadow");
 const closeModalBtn = document.querySelector(".close");
+
+const colorBtn = document.querySelector(".fa-palette");
 
 let countTime;
 let minutes = 0;
@@ -97,3 +99,5 @@ closeModalBtn.addEventListener("click", showModal);
 window.addEventListener("click", (e) =>
 	e.target === modalShadow ? showModal() : false
 );
+
+

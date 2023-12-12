@@ -34,20 +34,27 @@ body {
 	);
 	border-radius: 5px 5px 10px black;
 	color: #fff;
+	overflow: hidden;
 }
 
-.info {
+.info i {
 	position: absolute;
-	top: 6px;
-	right: 14px;
-	padding: 20px;
 	font-size: 24px;
+	top: 6px;
+	padding: 20px;
 	color: var(--second-color);
 	cursor: pointer;
 	transition: color 0.3s;
 }
 
-.info:hover {
+.info .fa-question {
+	right: 14px;
+}
+.info .fa-palette {
+	right: 50px;
+}
+
+.info i:hover {
 	color: var(--first-color);
 }
 
@@ -146,7 +153,7 @@ button:focus {
 	margin: 40px auto 0;
 	width: 200px;
 	background-color: var(--first-color);
-	transition: background-color .3s;
+	transition: background-color 0.3s;
 }
 
 .modal .close:hover {
@@ -160,4 +167,46 @@ button:focus {
 	100% {
 		opacity: 1;
 	}
+}
+
+.colors {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	top: 110px;
+	right: 10px;
+	width: 60px;
+	height: 230px;
+
+}
+
+.color {
+	width: 40px;
+	height: 40px;
+	border: 2px solid black;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+
+.one {
+	background-color: rgb(47, 141, 212);
+}
+.two {
+	background-color: rgb(33, 188, 44);
+}
+.three {
+	background-color: rgb(215, 215, 37);
+}
+
+.one:hover {
+	background-color: rgb(12, 126, 213);
+}
+.two:hover {
+	background-color: rgb(6, 182, 18);
+}
+.three:hover {
+	background-color: rgb(191, 191, 7);
 }
