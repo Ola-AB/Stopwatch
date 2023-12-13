@@ -12,7 +12,12 @@ const modalShadow = document.querySelector(".modal-shadow");
 const closeModalBtn = document.querySelector(".close");
 
 const colorBtn = document.querySelector(".fa-palette");
+const colorPanel = document.querySelector('.colors');
+const colorOne = document.querySelector(".one");
+const colorTwo = document.querySelector(".two");
+const colorThree = document.querySelector(".three");
 
+let root = document.documentElement;
 let countTime;
 let minutes = 0;
 let seconds = 0;
@@ -88,6 +93,8 @@ const showModal = () => {
 	modalShadow.classList.toggle(".modal-animation");
 };
 
+const changeColor = () => {};
+
 startBtn.addEventListener("click", handleStart);
 pauseBtn.addEventListener("click", handlePause);
 stopBtn.addEventListener("click", handleStop);
@@ -100,4 +107,19 @@ window.addEventListener("click", (e) =>
 	e.target === modalShadow ? showModal() : false
 );
 
+colorBtn.addEventListener('click', () => {
+	colorPanel.classList.toggle('show-color')
+});
 
+colorOne.addEventListener('click', () => {
+	root.style.setProperty("--first-color", "rgb(47, 141, 212)");
+	root.style.setProperty("--hover-color", "rgb(12, 126, 213)");
+});
+colorTwo.addEventListener('click', () => {
+	root.style.setProperty("--first-color", "rgb(33, 188, 44)");
+	root.style.setProperty("--hover-color", "rgb(5, 163, 16)");
+});
+colorThree.addEventListener('click', () => {
+	root.style.setProperty("--first-color", "rgb(215, 215, 37)");
+	root.style.setProperty("--hover-color", "rgb(191, 191, 7)");
+});

@@ -5,8 +5,9 @@
 }
 
 :root {
-	--first-color: #fa1406;
-	--second-color: #d2c7be;
+	--first-color: rgb(250, 20, 6);
+	--second-color: rgb(210, 199, 190);
+	--hover-color: rgb(250, 20, 6);
 }
 
 body {
@@ -157,7 +158,7 @@ button:focus {
 }
 
 .modal .close:hover {
-	background-color: rgb(226, 36, 26);
+	background-color: var(--hover-color);
 }
 
 @keyframes show-modal {
@@ -176,10 +177,10 @@ button:focus {
 	align-items: center;
 	position: absolute;
 	top: 110px;
-	right: 10px;
+	right: -100px;
 	width: 60px;
 	height: 230px;
-
+	transition: right .3s;
 }
 
 .color {
@@ -188,8 +189,12 @@ button:focus {
 	border: 2px solid black;
 	border-radius: 50%;
 	cursor: pointer;
+	transition: background-color 0.5s, box-shadow .5s;
 }
 
+.show-color {
+	transform: translateX(-110px);
+}
 
 .one {
 	background-color: rgb(47, 141, 212);
@@ -203,10 +208,13 @@ button:focus {
 
 .one:hover {
 	background-color: rgb(12, 126, 213);
+	box-shadow: 0 0 8px rgb(12, 126, 213);
 }
 .two:hover {
-	background-color: rgb(6, 182, 18);
+	background-color: rgb(5, 163, 16);
+	box-shadow: 0 0 8px rgb(5, 163, 16);
 }
 .three:hover {
 	background-color: rgb(191, 191, 7);
+	box-shadow: 0 0 8px rgb(191, 191, 7);
 }
